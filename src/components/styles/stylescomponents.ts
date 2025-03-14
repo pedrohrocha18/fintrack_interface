@@ -108,6 +108,8 @@ export const Nav = styled.nav`
   }
 
   @media (max-width: 768px) {
+    height: 120px;
+
     .logo {
       width: 200px;
     }
