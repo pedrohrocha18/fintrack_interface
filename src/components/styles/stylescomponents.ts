@@ -5,7 +5,7 @@ export const HomePage = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 120px;
   margin: 0 auto;
   padding: 40px 20px;
   width: 100%;
@@ -32,8 +32,13 @@ export const HomePage = styled.div`
     font-weight: bold;
   }
 
+  .main_text_description_img h3 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
   .main_text_description_img p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
   }
 
@@ -77,7 +82,7 @@ export const Nav = styled.nav`
   }
 
   ul {
-    display: flex; /* Mantém visível no desktop */
+    display: flex;
     gap: 15px;
     list-style: none;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
@@ -89,6 +94,32 @@ export const Nav = styled.nav`
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0%;
+      height: 3px;
+      background-color: #fff;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
   }
 
   .hamburger {
@@ -111,7 +142,7 @@ export const Nav = styled.nav`
     height: 120px;
 
     .logo {
-      width: 200px;
+      width: 160px;
     }
 
     .hamburger {
@@ -159,13 +190,135 @@ export const Nav = styled.nav`
 `;
 
 export const ButtonStyle = styled.button`
-  background-color: #00ca6c;
+  background: linear-gradient(135deg, #00ca6c, #008c4a); /* Efeito degradê */
   border: none;
-  border-radius: 10px;
-  color: #154a02;
+  border-radius: 12px;
+  color: #fff;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  height: 30px;
-  width: 120px;
+  height: 45px;
+  width: 140px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:hover {
+    transform: translateY(-3px); /* Eleva levemente o botão */
+    background: linear-gradient(135deg, #00e676, #00a152); /* Muda o degradê */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aprofunda a sombra */
+  }
+
+  &:active {
+    transform: scale(0.95); /* Dá um efeito de clique */
+  }
+
+  &:disabled {
+    background: #a5d6a7;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+`;
+
+export const BenefitsStyle = styled.div`
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  max-width: 500px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  img {
+    height: 45px;
+    width: 45px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .div_img_benefits {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 100px;
+    text-align: center;
+  }
+
+  .div_description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+  }
+`;
+
+export const CommentsStyle = styled.div`
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  img {
+    border-radius: 10px;
+    height: 80px;
+    width: 80px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .div_img_comments {
+    align-items: center;
+    background-color: #b2db9c;
+    border: 1px solid #068802;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    height: 110px;
+    text-align: center;
+    width: 110px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+  .div_comments {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+  }
 `;

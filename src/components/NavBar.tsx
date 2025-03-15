@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Nav } from "./styles/stylescomponents";
 import logo from "../assets/imgs/logo.png";
 
-
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -22,7 +21,9 @@ const NavBar = () => {
   return (
     <Nav>
       <div>
-        <img src={logo} alt="logo" className="logo" />
+        <a href="/">
+          <img src={logo} alt="logo" className="logo" />
+        </a>
       </div>
       <div
         className={`hamburger ${menuOpen ? "open" : ""}`}
