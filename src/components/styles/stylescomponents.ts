@@ -5,7 +5,7 @@ export const HomePage = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 100px;
   margin: 0 auto;
   padding: 40px 20px;
   width: 100%;
