@@ -12,21 +12,21 @@ const plans = [
     benefits: ["Acesso limitado", "Suporte por e-mail", "1 usuário"],
     color: "#4A90E2",
     image: plan1,
-    price: "R$ 19,90",
+    price: "GRATUITO",
   },
   {
     name: "Padrão",
     benefits: ["Acesso completo", "Suporte prioritário", "5 usuários"],
     color: "#099B7A",
     image: plan2,
-    price: "R$ 34,90",
+    price: "R$ 19,90",
   },
   {
     name: "Premium",
     benefits: ["Acesso VIP", "Suporte 24/7", "Usuários ilimitados"],
     color: "#F5A623",
     image: plan3,
-    price: "R$ 59,90",
+    price: "R$ 34,90",
   },
 ];
 

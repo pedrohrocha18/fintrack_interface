@@ -1,5 +1,5 @@
 import { Footer } from "./styles/stylescomponents";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const FooterComponent = () => {
   return (
@@ -23,9 +23,6 @@ const FooterComponent = () => {
         >
           <FaFacebook />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter />
-        </a>
         <a
           href="https://instagram.com"
           target="_blank"
@@ -34,7 +31,7 @@ const FooterComponent = () => {
           <FaInstagram />
         </a>
       </div>
-      <p className="copyright">
+      <p className="copyright">Pedro H. Rocha
         &copy; {new Date().getFullYear()} Todos os direitos reservados.
       </p>
     </Footer>

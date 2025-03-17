@@ -4,7 +4,6 @@ type Props = {
   image: any;
   title: string;
   description: string;
-  rate?: any;
 };
 
 const Comments = ({ image, title, description }: Props) => {
