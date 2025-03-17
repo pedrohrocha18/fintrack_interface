@@ -19,6 +19,7 @@ import { HomePage } from "../components/styles/stylescomponents";
 
 // framer motion
 import { motion } from "framer-motion";
+import PlanBenefits from "../components/Plans";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -41,7 +42,7 @@ const Home = () => {
             Não perca mais tempo com planilhas complexas. Com o FinTrack, você
             registra e acompanha suas finanças de maneira prática e organizada.
           </p>
-          <Button title="Criar Conta" />
+          <Button title="Criar Conta" showHaveAccount={true} />
         </motion.div>
         <motion.img
           src={imgPrincipal}
@@ -52,7 +53,12 @@ const Home = () => {
       </motion.div>
 
       {/* Seção 2 */}
-      <motion.div className="section" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+      <motion.div
+        className="section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <motion.img
           src={imgPrincipal2}
           alt="Imagem principal 2"
@@ -80,7 +86,12 @@ const Home = () => {
       </motion.div>
 
       {/* Seção 3 - Depoimentos */}
-      <motion.div className="section" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+      <motion.div
+        className="section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         <motion.div className="main_text_description_img" variants={fadeInUp}>
           <h3>O que nossos usuários dizem?</h3>
           <Comments
@@ -105,6 +116,26 @@ const Home = () => {
           className="main_img"
           variants={fadeIn}
         />
+      </motion.div>
+      <motion.div
+        className="section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="section"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        ></motion.div>
+      </motion.div>
+      {/* Seção 4 - planos */}
+      <motion.div className="section" initial="hidden" animate="visible">
+        <motion.div className="main_text_description_img" variants={fadeInUp}>
+          <h3>Planos e Valores</h3>
+          <PlanBenefits />
+        </motion.div>
       </motion.div>
     </HomePage>
   );

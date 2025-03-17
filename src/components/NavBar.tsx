@@ -35,10 +35,13 @@ const NavBar = () => {
       </div>
       <ul className={`${menuOpen ? "open" : isClosing ? "closing" : ""}`}>
         <li>
-          <a href="/">Home</a>
+          <a className="navLinks" href="/">Início</a>
         </li>
         <li>
-          <a href="/about">About</a>
+          <a className="navLinks" href="/create">Criar Conta</a>
+        </li>
+        <li>
+          <a className="navLinks" href="/login">Login</a>
         </li>
       </ul>
     </Nav>

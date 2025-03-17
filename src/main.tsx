@@ -9,7 +9,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // pages
 import Home from "./pages/Home.tsx";
-import About from "./pages/About.tsx";
+import Create from "./pages/Create.tsx";
+import Login from "./pages/Login.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/about",
-        element: <About />,
+        path: "/create",
+        element: <Create />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
