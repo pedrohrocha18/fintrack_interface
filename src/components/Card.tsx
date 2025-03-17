@@ -1,10 +1,9 @@
 import { BenefitsStyle } from "./styles/stylescomponents";
 
 type Props = {
-  image: any;
+  image: string;
   title: string;
   description: string;
-  rate?: any;
 };
 
 const Card = ({ image, title, description }: Props) => {

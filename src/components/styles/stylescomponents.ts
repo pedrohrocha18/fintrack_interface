@@ -73,9 +73,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   height: 150px;
-  padding: 10px 20px;
   width: 100%;
-  position: relative;
 
   .logo {
     width: 250px;
@@ -142,7 +140,7 @@ export const Nav = styled.nav`
     height: 120px;
 
     .logo {
-      width: 160px;
+      width: 210px;
     }
 
     .hamburger {
@@ -190,7 +188,7 @@ export const Nav = styled.nav`
 `;
 
 export const ButtonStyle = styled.button`
-  background: linear-gradient(135deg, #00ca6c, #008c4a); /* Efeito degradê */
+  background: linear-gradient(135deg, #00ca6c, #008c4a);
   border: none;
   border-radius: 12px;
   color: #fff;
@@ -199,21 +197,23 @@ export const ButtonStyle = styled.button`
   font-weight: bold;
   height: 45px;
   width: 200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background 0.3s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  will-change: transform, box-shadow, background;
 
   &:hover {
-    transform: translateY(-3px); /* Eleva levemente o botão */
-    background: linear-gradient(135deg, #00e676, #00a152); /* Muda o degradê */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aprofunda a sombra */
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #00e676, #00a152);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   }
 
   &:active {
-    transform: scale(0.95); /* Dá um efeito de clique */
+    transform: translateY(-1px) scale(0.98);
   }
 
   &:disabled {
@@ -233,7 +233,9 @@ export const BenefitsStyle = styled.div`
   padding: 10px;
   gap: 10px;
   max-width: 500px;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  will-change: transform, box-shadow, background-color;
 
   &:hover {
     transform: translateY(-5px);
@@ -260,13 +262,16 @@ export const BenefitsStyle = styled.div`
   }
 
   .div_description {
-    align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
+    text-align: left;
+    font-size: 12px;
     width: 200px;
+    min-height: 50px;
+    height: 100%;
+    flex-grow: 1;
   }
 `;
 
@@ -279,7 +284,10 @@ export const CommentsStyle = styled.div`
   display: flex;
   padding: 10px;
   gap: 10px;
-  transition: all 0.3s ease-in-out;
+  max-width: 500px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  will-change: transform, box-shadow, background-color;
 
   &:hover {
     transform: translateY(-5px);
@@ -312,20 +320,22 @@ export const CommentsStyle = styled.div`
   }
 
   .div_comments {
-    align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
     justify-content: center;
+    align-items: center;
     text-align: center;
     width: 200px;
+    min-height: 100px;
+    height: 100%;
+    flex-grow: 1;
   }
 `;
 
 export const PlansContainer = styled.div`
-justify-content:center;
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Padrão: 1 coluna */
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   padding: 40px 20px;
   max-width: 1200px;
@@ -333,11 +343,11 @@ justify-content:center;
   width: 100%;
 
   @media (min-width: 600px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas médias */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 900px) {
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas para telas grandes */
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
