@@ -23,7 +23,7 @@ export const HomePage = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: left;
+    text-align: center;
     max-width: 50%;
   }
 
