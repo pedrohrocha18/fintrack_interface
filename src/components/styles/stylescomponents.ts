@@ -74,7 +74,6 @@ export const LoginPage = styled.div`
   height: 100vh;
   width: 100%;
   padding: 40px 20px;
-  background: #f5f5f5;
 
   .login-box {
     display: flex;
@@ -163,10 +162,9 @@ export const CreateAccountPage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 100vh; /* Permite que a página role se necessário */
+  min-height: 100vh;
   width: 100%;
-  padding: 80px 20px 40px; /* Espaço extra no topo para navbar */
-  background: #f5f5f5;
+  padding: 80px 20px 40px;
 
   .signup-box {
     display: flex;
@@ -207,7 +205,8 @@ export const CreateAccountPage = styled.div`
     margin-bottom: 5px;
   }
 
-  input, select {
+  input,
+  select {
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -223,15 +222,15 @@ export const CreateAccountPage = styled.div`
     margin: 10px 0;
     text-align: left;
     width: 100%;
-}
+  }
 
-.checkbox-group input {
+  .checkbox-group input {
     width: 16px;
     height: 16px;
     margin: 0;
-}
+  }
 
-.checkbox-group label {
+  .checkbox-group label {
     font-size: 14px;
     color: #333;
     cursor: pointer;
@@ -240,16 +239,16 @@ export const CreateAccountPage = styled.div`
     align-items: center;
     gap: 5px;
     flex-wrap: wrap;
-}
+  }
 
-.checkbox-group a {
+  .checkbox-group a {
     color: #007bff;
     text-decoration: none;
-}
+  }
 
-.checkbox-group a:hover {
+  .checkbox-group a:hover {
     text-decoration: underline;
-}
+  }
 
   button {
     width: 100%;
@@ -295,7 +294,8 @@ export const CreateAccountPage = styled.div`
       font-size: 14px;
     }
 
-    input, select {
+    input,
+    select {
       font-size: 13px;
       padding: 8px;
     }
@@ -306,8 +306,6 @@ export const CreateAccountPage = styled.div`
     }
   }
 `;
-
-
 
 // components
 export const Nav = styled.nav`
