@@ -38,7 +38,7 @@ const NavBar = () => {
           <a className="navLinks" href="/">Início</a>
         </li>
         <li>
-          <a className="navLinks" href="/create">Criar Conta</a>
+          <a className="navLinks" href="/signup">Criar Conta</a>
         </li>
         <li>
           <a className="navLinks" href="/login">Login</a>

@@ -44,7 +44,7 @@ const PlanBenefits = () => {
             ))}
           </ul>
           <button>
-            <a href="/create">Assinar Agora</a>
+            <a href="/signup">Assinar Agora</a>
           </button>
         </PlanCard>
       ))}

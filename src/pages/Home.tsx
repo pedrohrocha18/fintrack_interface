@@ -34,7 +34,7 @@ const fadeIn = {
 const Home = () => {
   return (
     <HomePage>
-      {/* Seção 1 */}
+      {/* Seção 1 - Principal */}
       <motion.div className="section" initial="hidden" animate="visible">
         <motion.div className="main_text_description_img" variants={fadeInUp}>
           <h1>Gerencie suas finanças de forma simples e inteligente</h1>
@@ -42,7 +42,7 @@ const Home = () => {
             Não perca mais tempo com planilhas complexas. Com o FinTrack, você
             registra e acompanha suas finanças de maneira prática e organizada.
           </p>
-          <Button title="Criar Conta" showHaveAccount={true} href="/create"/>
+          <Button title="Criar Conta" showHaveAccount={true} href="/signup"/>
         </motion.div>
         <motion.img
           src={imgPrincipal}
@@ -52,7 +52,7 @@ const Home = () => {
         />
       </motion.div>
 
-      {/* Seção 2 */}
+      {/* Seção 2 - Benefícios */}
       <motion.div
         className="section"
         initial="hidden"

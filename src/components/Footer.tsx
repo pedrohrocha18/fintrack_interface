@@ -9,7 +9,7 @@ const FooterComponent = () => {
           <a href="/">Início</a>
         </li>
         <li>
-          <a href="/create">Criar Conta</a>
+          <a href="/signup">Criar Conta</a>
         </li>
         <li>
           <a href="/login">Login</a>
@@ -19,19 +19,17 @@ const FooterComponent = () => {
         <a
           href="https://facebook.com"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <FaFacebook />
         </a>
         <a
           href="https://instagram.com"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <FaInstagram />
         </a>
       </div>
-      <p className="copyright">Pedro H. Rocha
+      <p className="copyright">FinTrack
         &copy; {new Date().getFullYear()} Todos os direitos reservados.
       </p>
     </Footer>

@@ -12,15 +12,13 @@ const Button = ({ title, showHaveAccount, href }: Props) => {
         <a href={href}>{title}</a>
       </ButtonStyle>
       {showHaveAccount ? (
-        <div>
-          <a
-            className="haveAccount"
-            href="/login"
-            style={{ fontSize: "11px", textDecoration: "underline" }}
-          >
-            Já possui conta? Clique e faça o login.
-          </a>
-        </div>
+        <a
+          className="haveAccount"
+          href="/login"
+          style={{ fontSize: "11px", textDecoration: "underline" }}
+        >
+          Já possui conta? Clique e faça o login.
+        </a>
       ) : (
         ""
       )}
