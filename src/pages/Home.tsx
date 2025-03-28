@@ -42,7 +42,7 @@ const Home = () => {
             Não perca mais tempo com planilhas complexas. Com o FinTrack, você
             registra e acompanha suas finanças de maneira prática e organizada.
           </p>
-          <Button title="Criar Conta" showHaveAccount={true} href="/signup"/>
+          <Button title="Criar Conta" showHaveAccount={true} href="/signup" />
         </motion.div>
         <motion.img
           src={imgPrincipal}

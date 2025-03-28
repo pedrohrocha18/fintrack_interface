@@ -5,26 +5,27 @@ export const HomePage = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  margin: 0 auto;
   padding: 40px 20px;
+  gap: 100px;
   width: 100%;
 
   .section {
     align-items: center;
     display: flex;
-    gap: 40px;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
   }
 
   .main_text_description_img {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
     text-align: center;
-    max-width: 50%;
+    flex: 1;
+    max-width: 600px;
   }
 
   .main_text_description_img h1 {
@@ -49,8 +50,8 @@ export const HomePage = styled.div`
 
   @media (max-width: 768px) {
     .section {
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       text-align: center;
     }
 
@@ -74,7 +75,6 @@ export const LoginPage = styled.div`
   height: 100vh;
   width: 100%;
   padding: 40px 20px;
-  background: #f5f5f5;
 
   .login-box {
     display: flex;
@@ -163,10 +163,9 @@ export const CreateAccountPage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 100vh; /* Permite que a página role se necessário */
+  min-height: 100vh;
   width: 100%;
-  padding: 80px 20px 40px; /* Espaço extra no topo para navbar */
-  background: #f5f5f5;
+  padding: 80px 20px 40px;
 
   .signup-box {
     display: flex;
@@ -207,7 +206,8 @@ export const CreateAccountPage = styled.div`
     margin-bottom: 5px;
   }
 
-  input, select {
+  input,
+  select {
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -223,15 +223,15 @@ export const CreateAccountPage = styled.div`
     margin: 10px 0;
     text-align: left;
     width: 100%;
-}
+  }
 
-.checkbox-group input {
+  .checkbox-group input {
     width: 16px;
     height: 16px;
     margin: 0;
-}
+  }
 
-.checkbox-group label {
+  .checkbox-group label {
     font-size: 14px;
     color: #333;
     cursor: pointer;
@@ -240,16 +240,16 @@ export const CreateAccountPage = styled.div`
     align-items: center;
     gap: 5px;
     flex-wrap: wrap;
-}
+  }
 
-.checkbox-group a {
+  .checkbox-group a {
     color: #007bff;
     text-decoration: none;
-}
+  }
 
-.checkbox-group a:hover {
+  .checkbox-group a:hover {
     text-decoration: underline;
-}
+  }
 
   button {
     width: 100%;
@@ -295,7 +295,8 @@ export const CreateAccountPage = styled.div`
       font-size: 14px;
     }
 
-    input, select {
+    input,
+    select {
       font-size: 13px;
       padding: 8px;
     }
@@ -306,8 +307,6 @@ export const CreateAccountPage = styled.div`
     }
   }
 `;
-
-
 
 // components
 export const Nav = styled.nav`
@@ -473,12 +472,15 @@ export const BenefitsStyle = styled.div`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
-  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   gap: 10px;
   max-width: 500px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
   will-change: transform, box-shadow, background-color;
+  margin: 0 auto;
 
   &:hover {
     transform: translateY(-5px);
@@ -516,6 +518,20 @@ export const BenefitsStyle = styled.div`
     height: 100%;
     flex-grow: 1;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    width: 85%;
+
+    .div_description {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+  }
 `;
 
 export const CommentsStyle = styled.div`
@@ -526,7 +542,7 @@ export const CommentsStyle = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   padding: 10px;
-  gap: 10px;
+  margin-bottom: 20px;
   max-width: 500px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
     background-color 0.3s ease-in-out;

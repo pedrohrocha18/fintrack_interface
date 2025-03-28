@@ -35,13 +35,24 @@ const NavBar = () => {
       </div>
       <ul className={`${menuOpen ? "open" : isClosing ? "closing" : ""}`}>
         <li>
-          <a className="navLinks" href="/">Início</a>
+          <a className="navLinks" href="/">
+            Início
+          </a>
         </li>
         <li>
-          <a className="navLinks" href="/signup">Criar Conta</a>
+          <a className="navLinks" href="/signup">
+            Criar Conta
+          </a>
         </li>
         <li>
-          <a className="navLinks" href="/login">Login</a>
+          <a className="navLinks" href="/login">
+            Login
+          </a>
+        </li>
+        <li>
+          <a className="navLinks" href="/dashboard">
+            Dashboard
+          </a>
         </li>
       </ul>
     </Nav>

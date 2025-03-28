@@ -12,9 +12,9 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="container">
+      <>
         <Outlet />
-      </div>
+      </>
       <FooterComponent />
     </div>
   );

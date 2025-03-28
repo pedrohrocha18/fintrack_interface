@@ -4,7 +4,7 @@ import { CreateAccountPage } from "../components/styles/stylescomponents";
 const SignUpPage = () => {
   return (
     <CreateAccountPage>
-      <motion.div 
+      <motion.div
         className="signup-box"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,14 +31,22 @@ const SignUpPage = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           {[
-            { label: "Nome Completo", type: "text", placeholder: "Digite seu nome completo" },
+            {
+              label: "Nome Completo",
+              type: "text",
+              placeholder: "Digite seu nome completo",
+            },
             { label: "Email", type: "email", placeholder: "Digite seu email" },
             { label: "Senha", type: "password", placeholder: "Crie uma senha" },
-            { label: "Confirmar Senha", type: "password", placeholder: "Repita a senha" },
+            {
+              label: "Confirmar Senha",
+              type: "password",
+              placeholder: "Repita a senha",
+            },
             { label: "Data de Nascimento", type: "date" },
           ].map((input, index) => (
-            <motion.div 
-              className="input-group" 
+            <motion.div
+              className="input-group"
               key={index}
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -49,8 +57,8 @@ const SignUpPage = () => {
             </motion.div>
           ))}
 
-          <motion.div 
-            className="input-group" 
+          <motion.div
+            className="input-group"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 1 }}
@@ -64,13 +72,13 @@ const SignUpPage = () => {
             </select>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="checkbox-group"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 1.1 }}
           >
-            <input type="checkbox" id="terms" />
+            <input type="checkbox" id="terms" required />
             <label htmlFor="terms">
               Eu concordo com os <a href="#">termos e condições</a>
             </label>
@@ -81,16 +89,13 @@ const SignUpPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.2 }}
           >
-            <button 
-              type="submit"
-              className="submit-button"
-            >
+            <button type="submit" className="submit-button">
               Criar Conta
             </button>
           </motion.div>
         </motion.form>
 
-        <motion.p 
+        <motion.p
           className="login-link"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

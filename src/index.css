@@ -3,14 +3,16 @@
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
-
 * {
-  margin: 0 auto;
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   background-color: rgb(231, 231, 231);
   font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
   width: 100%;
 }
